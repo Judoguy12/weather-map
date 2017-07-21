@@ -26,7 +26,7 @@ while 1 ==1:
     lat = 52.27
     lon = -2.15
     owm = pyowm.OWM('f5f228ca75823de879e024d518f7a8cf')
-    observation = owm.weather_at_place("Droitwich,uk")
+    observation = owm.weather_at_place("Abbeville, fr")
     w = observation.get_weather()
     sts = w.get_detailed_status()
     wind = w.get_wind()
@@ -37,7 +37,7 @@ while 1 ==1:
     sunrise = w.get_sunrise_time('iso')
     sunset = w.get_sunset_time('iso')
     pressure = w.get_pressure()
-    fc = owm.daily_forecast('Droitwich,uk', limit = 6)
+    fc = owm.daily_forecast('Abbeville, fr', limit = 6)
     f = fc.get_forecast()
     print('Sunrise: '+str(sunrise))
     print('Weather: ')
@@ -66,10 +66,10 @@ while 1 ==1:
 
 
 
-    text = "PART1 DROITWICH. Droitwich's weather: Status:"+str(sts)+"Wind:"+str(wind)+',Temperature:'+str(temp)+',Rain:'+str(rain)+str(time) 
-    text2 = 'PART2 DROITWICH. Humidity and pressure data for Droitwich. Humidity:'+str(humid)+',Pressure:'+str(pressure)+str(time)
-    text3 = "PART3 DROITWICH. Sunrise and sunset times: Sunrise:"+str(sunrise)+',Sunset:'+str(sunset)+str(time)
-    text4 = "PART4 DROITWICH. The 6 day forcast is: " +str(forcast)
+    text = "1 Abbeville. Status:"+str(sts)+"Wind:"+str(wind)+',Temperature:'+str(temp)+',Rain:'+str(rain)+str(time) 
+    text2 = '2 Abbeville. Humidity and pressure data for Abbeville. Humidity:'+str(humid)+',Pressure:'+str(pressure)+str(time)
+    text3 = "3 Abbeville. Sunrise and sunset times: Sunrise:"+str(sunrise)+',Sunset:'+str(sunset)+str(time)
+    text4 = "4 Abbeville. The 6 day forcast is: " +str(forcast)
 
     message = text
     twitter.update_status(status = message)
@@ -79,5 +79,5 @@ while 1 ==1:
 
     message3 = text3
     twitter.update_status(status = message3)
-    sleep(21600)
+    sleep(43200)
 

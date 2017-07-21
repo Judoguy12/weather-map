@@ -66,10 +66,10 @@ while 1 ==1:
 
 
 
-    text = "Bath's weather: Status:"+str(sts)+"Wind:"+str(wind)+',Temperature:'+str(temp)+',Rain:'+str(rain)+str(time) 
-    text2 = 'Humidity and pressure data for Bath. Humidity:'+str(humid)+',Pressure:'+str(pressure)+str(time)
-    text3 = "Sunrise and sunset times: Sunrise:"+str(sunrise)+',Sunset:'+str(sunset)+str(time)
-    text4 = "The 6 day forcast is: " +str(forcast)
+    text = "PART1: BATH. Bath's weather: Status:"+str(sts)+"Wind:"+str(wind)+',Temperature:'+str(temp)+',Rain:'+str(rain)+str(time) 
+    text2 = 'PART2: BATH. Humidity and pressure data for Bath. Humidity:'+str(humid)+',Pressure:'+str(pressure)+str(time)
+    text3 = "PART3: BATH. Sunrise and sunset times: Sunrise:"+str(sunrise)+',Sunset:'+str(sunset)+str(time)
+    text4 = "PART4: BATH. The 6 day forcast is: " +str(forcast)
 
     message = text
     twitter.update_status(status = message)
@@ -79,5 +79,5 @@ while 1 ==1:
 
     message3 = text3
     twitter.update_status(status = message3)
-    sleep(1800)
+    sleep(21600)
 
